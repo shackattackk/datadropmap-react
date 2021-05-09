@@ -28,11 +28,7 @@ function Map() {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   />
 
-                <Marker icon={defaultIcon} position={[10.683240064345533,122.95807465530876]}> 
-                <Popup>
-                  Testing
-                </Popup>
-                </Marker> 
+                <Marker icon={defaultIcon} position={[10.683240064345533,122.95807465530876]}> </Marker> 
                  
                 
               </MapContainer>
