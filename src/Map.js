@@ -1,10 +1,12 @@
 import React from 'react';
+import  { Component,useEffect,useState } from 'react';
 import './Map.css';
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import * as hospitalData from "./data/hospi.json";
 
 
 const defaultIcon = L.icon({
@@ -18,6 +20,10 @@ const defaultIcon = L.icon({
 
 function Map() {
 
+    const [activeHospi,setActiveHospi] = useState(null)
+
+
+  
   
   
     return (
@@ -28,7 +34,30 @@ function Map() {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   />
 
-                <Marker icon={defaultIcon} position={[10.683240064345533,122.95807465530876]}> </Marker> 
+                  {hospitalData.hospitals.map(hospital => (
+                    <Marker key={hospital.id} icon={defaultIcon} position={[hospital.lat,hospital.long]}  eventHandlers={{
+                      click: (e) => {
+                        setActiveHospi(hospital)
+                      },
+                    }}/> 
+                    
+                    
+                  ))}
+
+                  {activeHospi && (
+                    <Popup 
+                    position={[activeHospi.lat,activeHospi.long]}
+                    >
+                      <div>
+                        <h2>{activeHospi.name}</h2>
+                        <p>ICU Beds: <strong>{activeHospi.icu_v}</strong></p>
+                        <p>Isol beds: <strong>{activeHospi.isolbed_v}</strong></p>
+                      </div>
+                    </Popup> 
+
+                  )}
+
+                
                  
                 
               </MapContainer>
