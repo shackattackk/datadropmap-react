@@ -6,7 +6,8 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-import * as hospitalData from "./data/DOH_Datadrop.json";
+import * as hospitalData from "./data/hospitaldata.json";
+import * as bedData from "./data/beddata.json";
 
 
 
@@ -25,10 +26,17 @@ console.log(typeof(hospitalData))
 
 function Map() {
 
-    const [activeHospi,setActiveHospi] = useState(null)
+    const [activeHospi,setActiveHospi] = useState(null);
+    const [activeBed,setActiveBed] = useState(null);
 
     
-
+    const checkBed = (hospital) =>{
+      bedData.beds.map(bed => {
+        if (hospital.cfname == bed.cfname){
+          setActiveBed(bed)
+        }
+      })
+    }
   
   
   
@@ -46,6 +54,7 @@ function Map() {
                     <Marker key={hospital.id} icon={defaultIcon} position={[hospital.north_coord,hospital.east_coord]}  eventHandlers={{
                       click: (e) => {
                         setActiveHospi(hospital)
+                        checkBed(hospital)
                       },
                     }}/> 
                     
@@ -59,14 +68,14 @@ function Map() {
 
                   
 
-                  {activeHospi && (
+                  {activeHospi && activeBed &&(
                     <Popup 
                     position={[activeHospi.north_coord,activeHospi.east_coord]}
                     >
                       <div>
                         <h2>{activeHospi.cfname}</h2>
-                        <p>ICU Beds: <strong>{activeHospi.ics_total}</strong></p>
-                        <p>Isol beds: <strong>{activeHospi.nurse_triage}</strong></p>
+                        <p>ICU Beds: <strong>{activeBed.icu_v}</strong></p>
+                        <p>Isol beds: <strong>{activeBed.isolbed_v}</strong></p>
                       </div>
                     </Popup> 
 
