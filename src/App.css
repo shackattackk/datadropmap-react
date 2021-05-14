@@ -10,6 +10,11 @@
   height: 100%;
   width: 100%;
   margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0.4;
 }
 
 .app__left {
@@ -19,4 +24,5 @@
   align-items: center;
   justify-content: center;
   margin: 30px;
+  flex: 0.6;
 }
