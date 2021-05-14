@@ -3,15 +3,14 @@
   padding: 0;
   height: 100vh;
   display: flex;
-  flex-direction: column;
 }
 
-.app__top {
+.app__right {
   height: 400px;
   width: 100%;
 }
 
-.app__bot {
+.app__left {
   width: 100%;
   height: 700px;
   display: flex;

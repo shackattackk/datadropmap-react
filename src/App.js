@@ -8,15 +8,15 @@ import CardBox from "./Card";
 function App() {
   return (
     <div className="App">
-      <div className="app__top">
-    
-      <CardBox/>
+      <div className="app__left">
+      <Map />
+      
       </div>
       
-      <div className="app__bot">
+      <div className="app__right">
         
+      <CardBox/>
       
-      <Map />
       </div>
     </div>
   );
