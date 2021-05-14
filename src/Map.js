@@ -42,7 +42,7 @@ function Map() {
   
     return (
         <div className="map">
-             <MapContainer center={[10.6840, 122.9563]} zoom={9} scrollWheelZoom={true}>
+             <MapContainer center={[10.2926, 123.0247]} zoom={9} scrollWheelZoom={true}>
                   <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -75,7 +75,7 @@ function Map() {
                       <div>
                         <h2>{activeHospi.cfname}</h2>
                         <p>ICU Beds: <strong>{activeBed.icu_v}</strong></p>
-                        <p>Isol beds: <strong>{activeBed.isolbed_v}</strong></p>
+                        <p>Isolation beds: <strong>{activeBed.isolbed_v}</strong></p>
                       </div>
                     </Popup> 
 
