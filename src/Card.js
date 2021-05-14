@@ -25,16 +25,28 @@ function CardBox() {
 
     return (
         <Card.Group>
-        <Card>
+        <Card style={{borderRadius:'15px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.2)',backgroundColor:'#f3ae4e'}}>
           <Card.Content>
-            <Card.Header className="center aligned header">New Cases</Card.Header>
-            <Card.Meta className="center aligned meta">Bacolod City</Card.Meta>
-            <Card.Description className="center aligned description">
+            <Card.Header className="center aligned header" style={{color:'#f0f1f2',fontSize:'20px'}}><strong>New Cases</strong></Card.Header>
+            <Card.Meta className="center aligned meta" style={{color:'#f0f1f2',fontSize:'11px'}}>Bacolod City</Card.Meta>
+            <Card.Description className="center aligned description" style={{color:'#f0f1f2',fontSize:'30px'}}>
+             <strong>{newCases}</strong>
+            </Card.Description>
+          </Card.Content>
+        </Card>
+        <Card style={{borderRadius:'15px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.2)',backgroundColor:'#cf5c60'}}>
+          <Card.Content>
+            <Card.Header className="center aligned header" style={{color:'#f0f1f2'}}><strong>More Data</strong></Card.Header>
+            <Card.Meta className="center aligned meta" style={{color:'#f0f1f2'}}>Bacolod City</Card.Meta>
+            <Card.Description className="center aligned description" style={{color:'#f0f1f2'}}>
              <strong>{newCases}</strong>
             </Card.Description>
           </Card.Content>
         </Card>
         </Card.Group>
+        
+
+        
     )
 }
 
