@@ -7,13 +7,11 @@
 }
 
 .app__right {
-  height: 100%;
   width: 100%;
+  height: 100vh;
   margin: 30px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   flex: 0.4;
 }
 
@@ -24,5 +22,14 @@
   align-items: center;
   justify-content: center;
   margin: 30px;
+  flex: 0.6;
+}
+
+.right_l {
+  display: flex;
+  flex: 0.4;
+}
+.right_r {
+  display: flex;
   flex: 0.6;
 }

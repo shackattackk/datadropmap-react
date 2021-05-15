@@ -15,9 +15,16 @@ function App() {
       </div>
       
       <div className="app__right">
+        <div className="right_l">
+        <CardBox/>
+        </div>
+        <div className="right_r">
+          <BrgyCardBox/>
+
+        </div>
         
-      <CardBox/>
-      <BrgyCardBox/>
+     
+      
       
       </div>
     </div>

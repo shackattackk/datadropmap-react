@@ -2,6 +2,7 @@ import React, { Component,useEffect,useState } from 'react';
 import { Button, Card, Image, Feed } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import * as casesData from "./data/casesdata.json";
+import './Card.css'
 
 
 
@@ -42,41 +43,21 @@ function BrgyCardBox() {
     return (
 
 
-       
-      
-      
-
-       <Card style={{borderRadius:'15px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.5)',backgroundColor:'#cf5c60'}}>
-    <Card.Content>
-      <Card.Header className="center aligned description" style={{color:'#f0f1f2'}}>Cases by Barangay</Card.Header>
-    </Card.Content>
-    <Card.Content>
-    <Feed>
-    {
+       <Card.Group> 
+      {
         Object.keys(brgyCnt).map((key, i) => (
-          
-          
-        <Feed.Event>
-          <Feed.Content>
-          
-            <Feed.Summary >
-              {key} : <strong style={{color:'#f0f1f2'}}>{brgyCnt[key]}</strong>
-            </Feed.Summary>
-          </Feed.Content>
-        </Feed.Event>
-        ))
+
+      <Card style={{height:'50px',width:'170px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#cf5c60'}}>
+      <Card.Content>
+        <Card.Header className="center aligned header cardFont" style={{color:'#f0f1f2',fontSize:'10px'}}><strong>{key}</strong></Card.Header>
+        <Card.Description className="center aligned description cardFont" style={{color:'#f0f1f2',fontSize:'15px'}}>
+         <strong>{brgyCnt[key]}</strong>
+        </Card.Description>
+      </Card.Content>
+    </Card>
+          ))
       }
-
-
-
-
-      
-
-      </Feed>
-    </Card.Content>
-  </Card>
-  
-        
+      </Card.Group>
 
         
     )
