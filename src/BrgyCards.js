@@ -1,5 +1,5 @@
 import React, { Component,useEffect,useState } from 'react';
-import { Button, Card, Image, Feed } from 'semantic-ui-react'
+import { Button, Card, Image, Feed, List,Flag, Header, Icon } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import * as casesData from "./data/casesdata.json";
 import './Card.css'
@@ -29,35 +29,43 @@ function BrgyCardBox() {
             barangayObj[casesData.cases[x].BarangayRes] = 1
           }
       }
-      await setBrgyCnt(barangayObj);
+      let entries = Object.entries(barangayObj);
+      let sorted = entries.sort((a, b) => b[1] - a[1]);
+      console.log(sorted)
+      await setBrgyCnt(sorted);
       
     }
     getData();
   },[]);
 
    
-
+  
 
 
 
     return (
 
 
-       <Card.Group> 
+    
+    <List className="listScroll"style={{height:'300px',padding:'10px',width:'200px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#cf5c60',overflow:'scroll'}}>
+      <Header as='h4'>Cases by Barangay</Header>
       {
-        Object.keys(brgyCnt).map((key, i) => (
-
-      <Card style={{height:'50px',width:'170px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#cf5c60'}}>
-      <Card.Content>
-        <Card.Header className="center aligned header cardFont" style={{color:'#f0f1f2',fontSize:'10px'}}><strong>{key}</strong></Card.Header>
-        <Card.Description className="center aligned description cardFont" style={{color:'#f0f1f2',fontSize:'15px'}}>
-         <strong>{brgyCnt[key]}</strong>
-        </Card.Description>
-      </Card.Content>
-    </Card>
-          ))
+        Object.values(brgyCnt).map(brgy => (
+              <List.Item>
+          <List.Content>
+            
+            <List.Header style={{color:'#f0f1f2',fontFamily:'Lato'}}>{brgy[0]}</List.Header>
+            
+            <List.Description style={{color:'#f0f1f2',fontFamily:'Lato'}}>
+            {Array.apply(null, { length: parseInt(brgy[1]) }).map((e, i) => (
+                <Icon style={{color:'#B23439'}}name='male' />
+              ))}
+            </List.Description>
+          </List.Content>
+    </List.Item>
+        ))
       }
-      </Card.Group>
+    </List>
 
         
     )
