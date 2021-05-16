@@ -17,7 +17,6 @@ const defaultIcon = L.icon({
 });
 
 
-console.log(typeof(hospitalData))
 
 
 

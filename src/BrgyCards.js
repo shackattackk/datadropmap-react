@@ -48,7 +48,7 @@ function BrgyCardBox() {
 
     
     <List className="listScroll"style={{height:'500px',padding:'10px',width:'200px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#cf5c60',overflow:'scroll'}}>
-      <Header as='h4' style={{color:'#EAB7B9'}}>Cases by Barangay</Header>
+      <Header as='h4' style={{color:'#EAB7B9'}}>New Cases by Barangay</Header>
       {
         Object.values(brgyCnt).map(brgy => (
               <List.Item>

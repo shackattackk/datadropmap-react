@@ -46,7 +46,7 @@ function CityCardBox() {
 
     
     <List className="listScroll"style={{height:'500px',padding:'10px',width:'200px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#f3ae4e',overflow:'scroll'}}>
-      <Header as='h4' style={{color:'#FBE6C8'}}>Cases by City</Header>
+      <Header as='h4' style={{color:'#FBE6C8'}}>New Cases by City</Header>
       {
         Object.values(cityCnt).map(city => (
               <List.Item>

@@ -4,6 +4,7 @@ import Map from './Map';
 import CardBox from "./Card";
 import BrgyCardBox from "./BrgyCards"
 import CityCardBox from "./CityCards"
+import HospiCardBox from "./HospitalCards"
 
 
 
@@ -15,13 +16,16 @@ function App() {
       </div>
       
       <div className="app__right">
-        
-          <div className="right_l">
-            <CityCardBox/>
-          </div>
-          <div className="right_r">
-            <BrgyCardBox/>
-          
+         <div className="app__rightup">
+            <div className="right_l">
+              <CityCardBox/>
+            </div>
+            <div className="right_r">
+              <BrgyCardBox/>
+            </div>
+        </div>
+        <div className = "app__rightbot">
+          <HospiCardBox/>
         </div>
       </div>
     </div>

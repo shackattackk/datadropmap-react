@@ -11,11 +11,22 @@
   width: 100%;
   background-color: #344a5f;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 0.3;
+}
+
+.app__rightup {
   align-items: center;
   justify-content: space-evenly;
-  padding-bottom: 50px;
-  flex: 0.3;
+  display: flex;
+  flex: 0.5;
+}
+
+.app__rightbot {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .app__left {
