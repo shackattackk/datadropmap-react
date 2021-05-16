@@ -39,9 +39,9 @@ function CardBox() {
         
       <Card style={{height:'100px',borderRadius:'15px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.2)',backgroundColor:'#f3ae4e'}}>
       <Card.Content>
-        <Card.Header className="center aligned header cardFont" style={{color:'#f0f1f2',fontSize:'20px'}}><strong>New Cases</strong></Card.Header>
-        <Card.Meta className="center aligned meta cardFont" style={{color:'#f0f1f2',fontSize:'11px'}}>Bacolod City</Card.Meta>
-        <Card.Description className="center aligned description cardFont" style={{color:'#f0f1f2',fontSize:'25px'}}>
+        <Card.Header className="center aligned header cardFont" style={{color:'#FBE6C8',fontSize:'20px'}}><strong>New Cases</strong></Card.Header>
+        <Card.Meta className="center aligned meta cardFont" style={{color:'#FBE6C8',fontSize:'11px'}}>Bacolod City</Card.Meta>
+        <Card.Description className="center aligned description cardFont" style={{color:'#FBE6C8',fontSize:'25px'}}>
          <strong>{newCases}</strong>
         </Card.Description>
       </Card.Content>
