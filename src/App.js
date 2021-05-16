@@ -3,6 +3,7 @@ import React, { Component,useEffect,useState } from 'react';
 import Map from './Map';
 import CardBox from "./Card";
 import BrgyCardBox from "./BrgyCards"
+import CityCardBox from "./CityCards"
 
 
 
@@ -16,7 +17,7 @@ function App() {
       
       <div className="app__right">
         <div className="right_l">
-        <CardBox/>
+        <CityCardBox/>
         </div>
         <div className="right_r">
           <BrgyCardBox/>

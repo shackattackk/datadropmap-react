@@ -47,7 +47,7 @@ function BrgyCardBox() {
 
 
     
-    <List className="listScroll"style={{height:'300px',padding:'10px',width:'200px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#cf5c60',overflow:'scroll'}}>
+    <List className="listScroll"style={{height:'600px',padding:'10px',width:'200px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#cf5c60',overflow:'scroll'}}>
       <Header as='h4' style={{color:'#EAB7B9'}}>Cases by Barangay</Header>
       {
         Object.values(brgyCnt).map(brgy => (
@@ -58,7 +58,7 @@ function BrgyCardBox() {
             
             <List.Description style={{fontFamily:'Lato'}}>
             {Array.apply(null, { length: parseInt(brgy[1]) }).map((e, i) => (
-                <Icon style={{color:'#B23439'}}name='male' />
+                <Icon style={{color:'#f3ae4e'}}name='male' />
               ))}
             </List.Description>
           </List.Content>
