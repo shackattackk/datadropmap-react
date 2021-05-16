@@ -11,22 +11,18 @@ function App() {
   return (
     <div className="App">
       <div className="app__left">
-      <Map />
-      
+        <Map />
       </div>
       
       <div className="app__right">
-        <div className="right_l">
-        <CityCardBox/>
-        </div>
-        <div className="right_r">
-          <BrgyCardBox/>
-
-        </div>
         
-     
-      
-      
+          <div className="right_l">
+            <CityCardBox/>
+          </div>
+          <div className="right_r">
+            <BrgyCardBox/>
+          
+        </div>
       </div>
     </div>
   );

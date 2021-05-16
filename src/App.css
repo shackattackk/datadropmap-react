@@ -3,36 +3,32 @@
   padding: 0;
   height: 100vh;
   display: flex;
+  /*background-color: #344a5f;*/
   background-color: #efefef;
 }
 
 .app__right {
   width: 100%;
-
-  margin: 30px;
+  background-color: #d5d5d5;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 30px;
+  justify-content: space-evenly;
   padding-bottom: 50px;
-  flex: 0.4;
+  flex: 0.3;
 }
 
 .app__left {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px;
-  flex: 0.6;
+  flex: 0.7;
 }
 
 .right_l {
   display: flex;
-  flex: 0.4;
 }
 .right_r {
   display: flex;
-  flex: 0.6;
 }
