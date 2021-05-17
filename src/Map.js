@@ -66,10 +66,11 @@ function Map() {
                     <Popup 
                     position={[activeHospi.north_coord,activeHospi.east_coord]}
                     >
-                      <div>
-                        <h3>{activeHospi.cfname}</h3>
-                        <p>ICU Beds: <strong>{activeBed.icu_v}</strong></p>
-                        <p>Isolation beds: <strong>{activeBed.isolbed_v}</strong></p>
+                      <div className="popup">
+                        <h4 className="popup">{activeHospi.cfname}</h4>
+                        <div className="popuptext">Available ICU Beds: <strong>{activeBed.icu_v}</strong></div>
+                        <div className="popuptext">Available Isolation beds: <strong>{activeBed.isolbed_v}</strong></div>
+                        
                       </div>
                     </Popup> 
 

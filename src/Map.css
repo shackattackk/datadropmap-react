@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo&family=Montserrat&family=Mulish:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap");
+
 .map {
   /*height: 600px;
   width: 1000px;*/
@@ -9,4 +14,19 @@
 .map .leaflet-container {
   height: 100%;
   width: 100%;
+}
+
+.popup h4 {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0px;
+}
+
+.popuptext {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
 }
