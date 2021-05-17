@@ -47,8 +47,8 @@ function BrgyCardBox() {
 
 
     
-    <List className="listScroll"style={{height:'500px',padding:'10px',width:'200px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#cf5c60',overflow:'scroll'}}>
-      <Header as='h4' style={{color:'#EAB7B9'}}>New Cases by <span style={{color:'#f3ae4e'}}>Barangay</span></Header>
+    <List className="listScroll"style={{height:'500px',padding:'10px',width:'200px',borderRadius:'25px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#cf5c60',overflow:'scroll'}}>
+      <Header as='h4' className="titlecard" style={{color:'#EAB7B9'}}>New Cases by<span style={{color:'#f3ae4e'}}> &nbsp;Barangay</span></Header>
       {
         Object.values(brgyCnt).map(brgy => (
               <List.Item>

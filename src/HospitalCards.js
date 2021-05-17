@@ -41,8 +41,8 @@ function HospiCardBox() {
 
 
     
-    <List className="listScroll"style={{height:'180px',padding:'10px',width:'450px',borderRadius:'10px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#9ACF5C',overflow:'scroll'}}>
-      <Header as='h4' style={{color:'#E2F1D0'}}>Available <span style={{color:'#5C9ACF'}}>Isolated ICU Beds</span></Header>
+    <List className="listScroll"style={{height:'180px',padding:'10px',width:'450px',borderRadius:'25px',boxShadow:'0 4px 8px 2px rgba(0,0,0,0.3)',backgroundColor:'#9ACF5C',overflow:'scroll'}}>
+      <Header as='h4' className="titlecard" style={{color:'#E2F1D0'}}>Available <span style={{color:'#5C9ACF'}}>&nbsp;Isolated ICU Beds</span></Header>
      { filteredHospi.map(hospi => (
                 
     

@@ -10,3 +10,8 @@
 .listScroll::-webkit-scrollbar {
   display: none;
 }
+
+.titlecard {
+  display: flex;
+  justify-content: center;
+}
