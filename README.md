@@ -8,4 +8,5 @@ This react app displays different statistics and data coming from static json fi
 npm run
 
 
+![Alt text](page.PNG?raw=true "Optional Title")
 
